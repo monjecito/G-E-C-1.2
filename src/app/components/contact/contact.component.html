@@ -1,0 +1,41 @@
+<section class="contact">
+	<div class="wrapper">
+	 <h1 class="beta uppercase montserrat regular line-after-heading">
+		{{titulo}} 
+		</h1> 
+		<p class="delta cardo regular italic">
+		Wow, what a fine cofee flavor
+		</p>
+	 </div>
+ </section>
+
+<div id='content'>
+  <div id='left'>
+    <div id='mapid'></div>
+  
+      
+   
+  </div>
+  <div id='right'>
+    <form (ngSubmit)="contactForm(form.value);reset(form)" #form="ngForm" id="formu">
+      <p>Registrate</p>
+      <input placeholder="Introduzca su nombre y su apellido" type='text' name="nombre" #nombre="ngModel" [(ngModel)]="correo.nombre" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}[ ]{1}[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ]{2,25}" >
+      <small *ngIf="!nombre.valid && nombre.touched">El nombre no es válido o está vacío</small>
+
+      <input placeholder="Introduzca su correo" type='email' name="email" #email="ngModel" [(ngModel)]="correo.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+      <small *ngIf="!email.valid && email.touched">El correo no es válido o está vacío</small>
+   
+      <input type='text' placeholder="Introduzca el asunto de su consulta" name="asunto"  #asunto="ngModel" [(ngModel)]="correo.asunto" required pattern="[a-zA-Z]+" >
+      <small *ngIf="!asunto.valid && asunto.touched">El asunto no es válido o está vacío</small>
+
+      <textarea placeholder='Message' rows='4' placeholder="Introduzca su mensaje" name="mensaje" #mensaje="ngModel" [(ngModel)]="correo.mensaje" required></textarea>
+      <small *ngIf="!mensaje.valid && mensaje.touched">El tema no puede estar vacío</small><br>
+      <input type="submit"  value="Enviar" [disabled]="form.invalid">
+      <input type="reset" value="Borrar" />
+    </form>
+    <p>Contactanos</p>
+    <p class='other entypo-mail'>
+      <a href='#'>ejemplo@outlook.com</a>
+    </p>
+  </div>
+</div>

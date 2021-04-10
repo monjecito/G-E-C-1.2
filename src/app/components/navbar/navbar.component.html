@@ -1,0 +1,26 @@
+
+
+  <nav class="navbar navbar-expand-lg fixed-top py-3">
+      <div class="container"><a href="#" class="navbar-brand text-uppercase">Green Energy Corp</a>
+          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+          
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item "><a [routerLink]="['/home']" [routerLinkActive]="['actived']" class="nav-link text-uppercase">Home <span class="sr-only">(current)</span></a></li>
+                  <li class="nav-item"><a [routerLink]="['/quienes-somos']" [routerLinkActive]="['actived']" class="nav-link text-uppercase">Quiénes somos</a></li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-uppercase " [routerLink]="['/servicios']"  [routerLinkActive]="['actived']" id="navbardrop" data-toggle="dropdown">
+                      SERVICIOS
+                    </a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item text-uppercase " [routerLink]="['/que-hacemos']" [routerLinkActive]="['actived']">¿Que hacemos?</a>
+                      <a class="dropdown-item text-uppercase "  [routerLink]="['/eficiencia-energetica']" [routerLinkActive]="['actived']">Eficiencia energética</a>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a  [routerLink]="['/contacto']" [routerLinkActive]="['actived']" class="nav-link text-uppercase ">Contacto</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+
