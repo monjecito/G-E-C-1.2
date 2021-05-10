@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { EficienciaComponent } from './components/eficiencia/eficiencia.component';
+import { TelemedidaLedsComponent } from './components/telemedida-leds/telemedida-leds.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { EficienciaComponent } from './components/eficiencia/eficiencia.componen
     NavbarComponent,
     QuienesSomosComponent,
     ServiciosComponent,
-    EficienciaComponent
+    EficienciaComponent,
+    TelemedidaLedsComponent
   ],
   imports: [
     BrowserModule,
